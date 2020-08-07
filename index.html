@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles/style.css">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please upgrade your browser to improve your experience.</p>
+        <![endif]-->
+        
+        <div class="clock">
+            <div class="clock-shield">
+                <div class="arrow hour"></div>
+                <div class="arrow minute"></div>
+                <div class="arrow second"></div>
+            </div>
+        </div>
+
+        <script>
+            const hourArrow = document.getElementsByClassName('hour')[0];
+            const minuteArrow = document.getElementsByClassName('minute')[0];
+            const secondArrow = document.getElementsByClassName('second')[0];
+            setInterval(function() {
+                const date = new Date();
+                    const hour = date.getHours();
+                    const minute = date.getMinutes();
+                    const second = date.getSeconds();
+
+                if(hour===0||minute===0||second===0) {
+                    hourArrow.style.transition =  '0';
+                    minuteArrow.style.transition =  '0';
+                    secondArrow.style.transition =  '0';
+                } 
+                
+                hourArrow.style.transform = `rotate(${hour*15}deg)`;
+                minuteArrow.style.transform = `rotate(${minute*6}deg)`;
+                secondArrow.style.transform = `rotate(${second*6}deg)`;
+            }, 1000)
+        </script>
+    </body>
+</html>

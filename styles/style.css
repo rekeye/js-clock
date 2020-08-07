@@ -1,0 +1,59 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#007acc), to(#d4d4d4));
+  background: linear-gradient(#007acc, #d4d4d4);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: 0;
+          flex-direction: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.clock {
+  height: 500px;
+  width: 500px;
+  border: 10px solid #252525;
+  border-radius: 50%;
+}
+
+.clock-shield {
+  height: 90%;
+  width: 90%;
+  padding: 5%;
+  position: relative;
+}
+
+.arrow {
+  width: 8px;
+  height: 220px;
+  position: absolute;
+  left: 50%;
+  background-color: #252525;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-transition: all 0.05s;
+  transition: all 0.05s;
+  -webkit-transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+          transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.hour {
+  height: 160px;
+  top: 17%;
+}
+
+.second {
+  margin-left: 2px;
+  width: 4px;
+}
+/*# sourceMappingURL=style.css.map */
